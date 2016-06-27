@@ -19,7 +19,7 @@ public abstract class RDBImplCommand {
 
     //  Database credentials
     static final String USER = "root";
-    static final String PASS = "root";
+    static final String PASS = "tiger";
 
     protected Object result;
     protected Connection conn;

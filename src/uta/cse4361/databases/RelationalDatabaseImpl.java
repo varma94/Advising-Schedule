@@ -16,6 +16,7 @@ import uta.cse4361.businessobjects.AppointmentType;
 import uta.cse4361.businessobjects.Slot;
 import uta.cse4361.businessobjects.StudentAppointment;
 import uta.cse4361.businessobjects.AccountType;
+import uta.cse4361.businessobjects.EmailAccount;
 
 /**
  *
@@ -132,6 +133,12 @@ public class RelationalDatabaseImpl implements DatabaseImpInterface{
         RDBImplCommand getAvailSlot = new GetAvailSlots();
         getAvailSlot.execute();
         return(ArrayList<Slot>) getAvailSlot.getResult();
+    }
+     @Override
+    public String getEmailAccount(EmailAccount aa){
+        RDBImplCommand getAccount = new EmailGet(aa);
+        getAccount.execute();
+        return (String)getAccount.getResult();
     }
     
     @Override

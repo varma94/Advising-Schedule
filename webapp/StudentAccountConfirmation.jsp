@@ -18,8 +18,8 @@
         <title>Account Confirmation</title>
     </head>
 <%
-//            int rank = -1;
-//            int sessionid = -1;
+            int rank = 2;
+           int sessionid = 2;
 //            if ((session.getAttribute("id") == null) || (session.getAttribute("rank") == null)) {
 //               response.sendRedirect("index.jsp");
 //            }

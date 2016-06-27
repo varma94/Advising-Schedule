@@ -48,7 +48,9 @@
                         
                         session.setAttribute("id",identity);
                         int userType = Integer.parseInt(typeString);
+                        
                         int rank = dm.getAccountType(userType).getPrivilege();
+                        
                         session.setAttribute("rank", ""+rank);
                         response.sendRedirect("index.jsp");
                         }

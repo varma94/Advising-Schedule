@@ -17,6 +17,7 @@ import uta.cse4361.businessobjects.StudentPasswordAccount;
 import uta.cse4361.businessobjects.StudentAccount;
 import uta.cse4361.businessobjects.AppointmentType;
 import uta.cse4361.businessobjects.AccountType;
+import uta.cse4361.businessobjects.EmailAccount;
 
 /**
  *
@@ -189,6 +190,10 @@ public class DatabaseManager {
     
     public ArrayList<AccountType> getAccountTypes(){
         return imp.getAccountTypes();
+    }
+    
+     public String emailRegister(EmailAccount aa){
+        return imp.getEmailAccount(aa);
     }
     
     public AccountType getAccountType(int id){

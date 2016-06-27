@@ -17,7 +17,7 @@ public class StudentAdvisor extends RDBImplCommand {
     
     private StudentAccount sa;
     private String sqlQuery = "INSERT INTO USER(UserEmail, UserPassword,"
-            + " UserName, UserDepartment, UserRank) VALUES (?, ?, ?, ?, ?)";
+            + " UserName, UserDepartment, UserRank, lognum) VALUES (?, ?, ?, ?, ?, ?)";
     public StudentAdvisor(StudentAccount sa){
         this.sa = sa;
     }

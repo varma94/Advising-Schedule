@@ -86,9 +86,9 @@
         <div id="wrapper">
             <jsp:include page="header.jsp" />
             <div id="accordion">
-                <h3>Create Advisor Account</h3>
+                <h3>Create Student Account</h3>
                 <div>
-                    <form role="form" id="create"  onSubmit="return validate();" action="AccountConfirmation.jsp" method="POST">
+                    <form role="form" id="create"  onSubmit="return validate();" action="StudentAccountConfirmation.jsp" method="POST">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input class="form-control" type="text" name="email" id="email" value="">
@@ -122,15 +122,15 @@
                                 %>
                             </select>
                         </div>
-                        <div class="form-group">
+                   <!--    <div class="form-group">
                             <label for="password">Password</label>
-                            <input class="form-control" type="password" name="password" id="password" value="" onkeyup="passwordChanged()">
+                            <input class="form-control" type="hidden" name="password" id="password" value="@1234" onkeyup="passwordChanged()">
                             <span id="strength"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="passwordConfirm">Confirm Password</label>
-                            <input class="form-control" type="password" name="passwordConfirm" id="passwordConfirm" value="">
-                        </div>
+                        </div> -->
+                       <div class="form-group">
+                            <label for="password">Password</label>
+                            <input class="form-control" type="hidden" name="password" id="password" value="@abc124">
+                        </div> 
                         <div class="form-group">
                             <input class="form-control" type="hidden" name="lognum" id="lognum" value="0">
                         </div> 

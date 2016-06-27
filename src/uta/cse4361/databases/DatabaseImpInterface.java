@@ -16,6 +16,7 @@ import uta.cse4361.businessobjects.StudentAccount;
 import uta.cse4361.businessobjects.StudentPasswordAccount;
 import uta.cse4361.businessobjects.AppointmentType;
 import uta.cse4361.businessobjects.AccountType;
+import uta.cse4361.businessobjects.EmailAccount;
 
 public interface DatabaseImpInterface {
     public String saveSlots(ArrayList<Slot> slots);
@@ -23,7 +24,7 @@ public interface DatabaseImpInterface {
     public ArrayList<Appointment> getAppointments();
     public String modifyStudentAppointment(int id, StudentAppointment appt);
     public Appointment getAppointment(int apptID);
-    
+    public String getEmailAccount(EmailAccount aa);
     public String modifyAppointment(int id, Appointment appt);
     public String modifySlot(Date d, int startHour, int endHour, int startMin, int endMin, int slotID);
     public ArrayList<Slot> getSlot();

@@ -15,21 +15,21 @@
         <title>Modify Appointment</title>
     </head>
 <%
-            int rank = -1;
-            int sessionid = -1;
-            if ((session.getAttribute("id") == null) || (session.getAttribute("rank") == null)) {
-               response.sendRedirect("index.jsp");
-            }
-            if (!(session.getAttribute("id") == null)) {
-                    sessionid = Integer.parseInt((String) session.getAttribute("id"));
-                }
-                if (!(session.getAttribute("rank") == null)) {
-                    rank = Integer.parseInt((String) session.getAttribute("rank"));
-            }
-            if(rank != 0 && rank != 1)
-                {
-                    response.sendRedirect("index.jsp");
-                }
+            int rank = 2;
+            int sessionid = 2;
+//            if ((session.getAttribute("id") == null) || (session.getAttribute("rank") == null)) {
+//               response.sendRedirect("index.jsp");
+//            }
+//            if (!(session.getAttribute("id") == null)) {
+//                    sessionid = Integer.parseInt((String) session.getAttribute("id"));
+//                }
+//                if (!(session.getAttribute("rank") == null)) {
+//                    rank = Integer.parseInt((String) session.getAttribute("rank"));
+//            }
+//            if(rank != 0 && rank != 1)
+//                {
+//                    response.sendRedirect("index.jsp");
+//                }
       %>
     <body>
         <jsp:include page="navigationbar.jsp" />
@@ -43,7 +43,7 @@
 
                         DatabaseManager dm = new DatabaseManager();
                         if (request.getParameter("email") == null || request.getParameter("email") == "" || request.getParameter("email").equals("")) {
-                            response.sendRedirect("modifyAppointment.jsp");
+                         //   response.sendRedirect("modifyAppointment.jsp");
                         }
                         else 
                         {

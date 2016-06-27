@@ -12,21 +12,21 @@
         <%
             //Uncomment when there's a proper way to create an admin account
                 //this code redirects anyone who is not an admin back to the index page
-            int rank = -1;
-            int sessionid = -1;
-            if ((session.getAttribute("id") == null) || (session.getAttribute("rank") == null)) {
-               response.sendRedirect("index.jsp");
-            }
-            if (!(session.getAttribute("id") == null)) {
-                    sessionid = Integer.parseInt((String) session.getAttribute("id"));
-                }
-                if (!(session.getAttribute("rank") == null)) {
-                    rank = Integer.parseInt((String) session.getAttribute("rank"));
-            }
-            if(rank != 1 && rank!=2)
-                {
-                    response.sendRedirect("index.jsp");
-                }
+            int rank = 2;
+            int sessionid = 2;
+//            if ((session.getAttribute("id") == null) || (session.getAttribute("rank") == null)) {
+//               response.sendRedirect("index.jsp");
+//            }
+//            if (!(session.getAttribute("id") == null)) {
+//                    sessionid = Integer.parseInt((String) session.getAttribute("id"));
+//                }
+//                if (!(session.getAttribute("rank") == null)) {
+//                    rank = Integer.parseInt((String) session.getAttribute("rank"));
+//            }
+//            if(rank != 1 && rank!=2)
+//                {
+//                    response.sendRedirect("index.jsp");
+//                }
         %>
         <script type="text/javascript">
             function validate() {
@@ -101,7 +101,7 @@
         <div id="wrapper">
             <jsp:include page="header.jsp" />
             <div id="accordion">
-                <h3>Create Advisor Account</h3>
+                <h3>Update Password</h3>
                 <div>
                 <form role="form" id="create"  onSubmit="return validate();" action="PasswordConfirmation.jsp" method="POST">
                     <!--                    <div class="form-group">
@@ -119,7 +119,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">New Password</label>
-                        <input class="form-control" type="password" name="password" id="password" value="">
+                        <input class="form-control" type="password" name="password" id="password" value="" onkeyup="passwordChanged()">
                         <span id="strength"></span>
                     </div>
                     <div class="form-group">

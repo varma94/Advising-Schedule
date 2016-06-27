@@ -24,7 +24,7 @@ CREATE TABLE SLOT(
     SlotStartHour INTEGER NOT NULL,
     SlotStartMin INTEGER NOT NULL,
     appointmentTypeID INTEGER NOT NULL,
-    advisorID INTEGER NOT NULL
+    advisorID INTEGER NOT NULL,
     PRIMARY KEY (SlotID)
 );
 

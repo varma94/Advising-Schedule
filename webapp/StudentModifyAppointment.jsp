@@ -58,7 +58,7 @@
                                     </thead>
                                     <tbody>
                                 <%
-                                    String email = request.getParameter("email");
+                                    String email = "sirivarma.vegiraju@mavs.uta.edu";
                                     dm = new uta.cse4361.databases.DatabaseManager(); 
                                     java.util.ArrayList<uta.cse4361.businessobjects.StudentAppointment> appts = dm.getStudentAppointments(email); 
                                     for(StudentAppointment a: appts) {
